@@ -1,0 +1,543 @@
+{% load static%}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static "fortuneWheel/css/wheel.css"%}" />
+<style>
+  .container2 {
+    background-color: #03090f;
+    display: flex;
+    padding: 32px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    max-width: 1312px;
+    align-items: start;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo {
+    color: #fff;
+    margin-top: 16px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 900 56px Nunito, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .logo {
+      font-size: 40px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 991px) {
+    .nav {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .nav-links {
+    align-self: start;
+    display: flex;
+    margin-top: 17px;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 991px) {
+    .nav-links {
+      white-space: initial;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    margin-left: 12px;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 991px) {
+    .nav-items {
+      margin-left: 10px;
+      white-space: initial;
+    }
+  }
+
+  .nav-item-active {
+    align-self: start;
+    display: flex;
+    gap: 11px;
+    color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .nav-item-active {
+      white-space: initial;
+    }
+  }
+
+  .nav-item-text {
+    font-family: Nunito Sans, sans-serif;
+  }
+
+  .nav-item-icon {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 11px;
+    align-self: start;
+  }
+
+  .nav-item {
+    color: #9196a5;
+    font-family: Nunito Sans, sans-serif;
+  }
+
+  .nav-active-indicator {
+    border-radius: 4px;
+    background-color: #5277d9;
+    margin-top: 9px;
+    height: 2px;
+  }
+
+  .nav-item-promo {
+    color: #9196a5;
+    font-family: Nunito Sans, sans-serif;
+    margin: auto 0;
+  }
+
+  .nav-item-about {
+    color: #9196a5;
+    font-family: Nunito Sans, sans-serif;
+    margin: auto 0;
+  }
+
+  .nav-icon-chat {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 48px;
+  }
+
+  .nav-icon-lang {
+    aspect-ratio: 1.92;
+    object-fit: auto;
+    object-position: center;
+    width: 92px;
+  }
+
+  .hero-title {
+    border-radius: 55px;
+    background-color: #19232b;
+    margin-top: 77px;
+    width: 864px;
+    max-width: 100%;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    padding: 20px 80px 600px;
+    font: 800 48px Nunito, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .hero-title {
+      font-size: 50px;
+      margin-top: 40px;
+      padding: 0 20px 40px;
+    }
+  }
+
+  .footer {
+    background: linear-gradient(253deg, #03090f 0%, #0e161d 100%);
+    align-self: stretch;
+    display: flex;
+    margin-top: 228px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 80px 24px;
+  }
+
+  @media (max-width: 991px) {
+    .footer {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .footer-header {
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 1208px;
+    align-items: start;
+    gap: 20px;
+    color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .footer-header {
+      max-width: 100%;
+      flex-wrap: wrap;
+      padding-right: 20px;
+    }
+  }
+
+  .footer-logo {
+    margin-top: 11px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 900 56px Nunito, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .footer-logo {
+      font-size: 40px;
+    }
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .footer-icon-chat {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 48px;
+  }
+
+  .footer-contact {
+    display: flex;
+    gap: 16px;
+    flex-grow: 1;
+    flex: auto;
+  }
+
+  .footer-icon-phone {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 48px;
+  }
+
+  .footer-phone {
+    border-radius: 4px;
+    background-color: #5176d6;
+    display: flex;
+    gap: 11px;
+    padding: 16px;
+  }
+
+  .footer-phone-icon {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 16px;
+    fill: #fff;
+    align-self: start;
+  }
+
+  .footer-phone-number {
+    font-family: Nunito Sans, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  .footer-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+    align-self: end;
+    margin-top: 44px;
+    width: 1208px;
+    max-width: 100%;
+    height: 1px;
+  }
+
+  @media (max-width: 991px) {
+    .footer-divider {
+      margin-top: 40px;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    margin-top: 53px;
+    width: 100%;
+    max-width: 1208px;
+    align-items: start;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .footer-links {
+      max-width: 100%;
+      flex-wrap: wrap;
+      padding-right: 20px;
+      margin-top: 40px;
+    }
+  }
+
+  .footer-link-group {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-link-title {
+    color: #fff;
+    font: 600 18px Nunito Sans, sans-serif;
+  }
+
+  .footer-link-list {
+    color: #9196a5;
+    margin-top: 24px;
+    font: 400 16px/26px Nunito Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  .footer-bottom {
+    display: flex;
+    margin-top: 21px;
+    width: 100%;
+    max-width: 1208px;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 14px;
+    color: #9196a5;
+    font-weight: 400;
+    line-height: 186%;
+  }
+
+  @media (max-width: 991px) {
+    .footer-bottom {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer-bottom-left {
+    align-self: end;
+    display: flex;
+    margin-top: 35px;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: fit-content;
+  }
+
+  @media (max-width: 991px) {
+    .footer-bottom-left {
+      max-width: 100%;
+    }
+  }
+
+  .footer-bottom-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 1px;
+  }
+
+  @media (max-width: 991px) {
+    .footer-bottom-divider {
+      max-width: 100%;
+    }
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    margin-top: 24px;
+    gap: 20px;
+    padding: 0 1px;
+  }
+
+  @media (max-width: 991px) {
+    .footer-bottom-content {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer-copyright {
+    font-family: Nunito Sans, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+  }
+
+  .footer-payment-icons {
+    aspect-ratio: 7.69;
+    object-fit: auto;
+    object-position: center;
+    width: 267px;
+    max-width: 100%;
+  }
+
+  .footer-icon-lang {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 64px;
+    align-self: start;
+  }
+</style>
+
+<div class="container2">
+  <header class="header">
+    <div class="logo">DIVELOTO</div>
+    <nav class="nav">
+      <div class="nav-links">
+        <div class="nav-items">
+          <div class="nav-item-active">
+            <div class="nav-item-text"><a href="{% url 'home' %}">Главная </a></div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d5d9ed8fb9c1f0e74cb8cb93675e274fc74366c122546aaf239c05c18231fc4?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="nav-item-icon" />
+          </div>
+          <div class="nav-item">Игры</div>
+        </div>
+        <div class="nav-active-indicator"></div>
+      </div>
+      <div class="nav-item-promo">Промокоды</div>
+      <div class="nav-item-about">О нас</div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bde2983801be248a297e3734ff015735230d79d99d2597d9e63ac6b9f3a14027?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="nav-icon-chat" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f0af7b3692991228d2b8bbf3a89ea0153fd1e81d71938f6ec7f90601bb81d64?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="nav-icon-lang" />
+    </nav>
+  </header>
+  <h1 class="hero-title">Колесо Фортуны</h1>
+  <footer class="footer">
+    <div class="footer-header">
+      <div class="footer-logo">DIVELOTO</div>
+      <div class="footer-icons">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e017573cf200aa70834b318eed4d962b85b0e1d8c4b99ca36087e6ed7de33605?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="footer-icon-chat" />
+        <div class="footer-contact">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5893e62df2fb8e9bd049b4bf563cee7c0e60a4b7d95834c09844ab9175ea1b47?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="footer-icon-phone" />
+          <div class="footer-phone">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e01f8504da6f1d6daa328595f370b186d44903acc33d3c37724472765bf8b79?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="footer-phone-icon" />
+            <div class="footer-phone-number">7 (705) 700-55-88</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <div class="footer-link-group">
+        <div class="footer-link-title">Game Types</div>
+        <div class="footer-link-list">
+          Baccarat <br />
+          Slot <br />
+          Fish Shooting <br />
+          Roulette <br />
+          Hi-Lo/SicBo <br />
+          Fantan <br />
+          YuXiaXie <br />
+          Pokdeng <br />
+          Texas Poker <br />
+          Dragon-Tiger <br />
+          Backjack <br />
+          Gao Ge <br />
+          Keno <br />
+          Lottery <br />
+        </div>
+      </div>
+      <div class="footer-link-group">
+        <div class="footer-link-title">Game Providers</div>
+        <div class="footer-link-list">
+          SCR888 <br />
+          Pussy888 <br />
+          Joker <br />
+          Live22 <br />
+          Mega888 <br />
+          Ruby888 <br />
+          Royal Hill <br />
+          Holiday Palace <br />
+          Red Dragon <br />
+          GClub Royal <br />
+          Golden Slot <br />
+          SBOBET <br />
+          Maxbet <br />
+          iBet789
+        </div>
+      </div>
+      <div class="footer-link-group">
+        <div class="footer-link-title">Blogs</div>
+        <div class="footer-link-list">
+          Baccarat <br />
+          Dragon-Tiger <br />
+          Gourb Crab Fish <br />
+          Sic Bo <br />
+          Slots <br />
+          Roulette <br />
+          Poker <br />
+          Poipet <br />
+          Gaming Sites <br />
+          GClub
+        </div>
+      </div>
+      <div class="footer-link-group">
+        <div class="footer-link-title">Register</div>
+        <div class="footer-link-list">
+          Slots 15 Free Spins <br />
+          DiveLoto Download
+        </div>
+      </div>
+      <div class="footer-link-group">
+        <div class="footer-link-title">Other</div>
+        <div class="footer-link-list">
+          About Us <br />
+          Reviews <br />
+          Spot Fake Websites <br />
+          T&C <br />
+          Highlight
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <div class="footer-bottom-divider"></div>
+        <div class="footer-bottom-content">
+          <div class="footer-copyright">
+            All Rights Reserved © DiveLoto. Official Loto Games
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/850dd9c5b033871ef3bae30c749ef8636ee7320a24e9f5e1e15d1fcef2f08d1f?apiKey=7dc9461b510446bcacd85ac83434fb19&" alt="" class="footer-payment-icons" />
+
+
+
+
+  <button id="spin">Diveloto</button> 
+  <div id="triangle_down"></div>
+  <div class="container">
+    <div class="one">x4</div>
+    <div class="two">x2</div>
+    <div class="three">-6</div>
+    <div class="four">x1</div>
+    <div class="five">-4</div>
+    <div class="six">-5</div>
+    <div class="seven">24</div>
+    <div class="eight">-1</div>
+</div> 
+  <script src="{% static "fortuneWheel/js/wheel.js" %}"></script>
+</body>
+</html>
+

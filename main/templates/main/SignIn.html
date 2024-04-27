@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static "main/css/SignIn.css" %}">
+        <link rel="stylesheet" href="{% static "main/css/animation.css" %}">
+    </head>
+        <body>
+
+        <center>         
+            <div class="login-wrap">
+                <div class="login-html">
+                    <h3   class="sign-in" checked><label class="tab">SIGN IN</label></h3>
+                    <h6 class="no-account">No account?<a href="{% url 'registration' %}">Sign up</a></h6>
+
+                    <div class="login-form">
+                        <div class="sign-in-htm">
+
+                            <form method="post">
+                                {% csrf_token %}
+
+                            <div class="form-error">{{ form.non_field_errors }}</div>
+
+
+                            <div class="group">
+                                <label for="user" class="label1">Enter your username or email address</label>
+                                <input id="user" type="text" class="input" placeholder="Username" name="username">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Enter your password</label>
+                                <input id="pass" type="password" class="input" data-type="password" placeholder="Password" name="password">
+                            </div>
+
+                            <div class="forms-error">{{ form.errors }}</div>
+
+                        </div>
+
+
+
+                        <div class="hr"></div>
+
+                            <div class="group">
+                                <input type="submit" class="submit-sign-in" values="Sign In"></input>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </center>
+</body>
+</html>

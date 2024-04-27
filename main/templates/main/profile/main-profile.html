@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static "main/css/profile/main-profile.css"%}">
+    </head>
+    <body>
+
+        <aside>
+        <div id="Profile">
+            <div class="Profile-menu">
+            <a href="{% url "profile" %}">Основное<span></span></a>
+            <a href="{% url "profile_notifications" %}">Уведомления<span></span></a>
+            <a href="{% url "profile_bonuses" %}">Бонусы<span></span></a>
+            </div>
+        </div>
+
+        </aside>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

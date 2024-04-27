@@ -1,0 +1,178 @@
+#notifications-settings {
+    position: absolute;
+    width: 976px;
+    height: 638px;
+    margin-top: 133px;
+    margin-left: 400px;
+    gap: 0px;
+    border-radius: 25px;
+    background: #19232B;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.28px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#notifications-settings .main {
+    display: flex
+}
+
+#notifications-settings .main p {
+    width: 500px;
+    height: 20px;
+    margin-top: 100px;
+    margin-left: 80px;
+    color: #FFFFFFB2;
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#notifications-settings .main a {
+    position: absolute;
+    width: 750px;
+    height: 27px;
+    margin-top: 70px;
+    margin-left: 80px
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+  
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 59px;
+    height: 34px;
+    background: #03090F;
+    display: block;
+    border-radius: 31px;
+    position: relative;
+    margin-left: 850px;
+    margin-top: 66px;
+}
+  
+label:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+  
+input:checked + label {
+    background: #5176D6;
+}
+  
+input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+  
+label:active:after {
+    width: 50px;
+}
+
+
+
+#notifications-settings .post-main {
+    margin-top: 60px;
+}
+
+hr {
+    border-left: 2px solid black;
+    height: 430px; 
+    width: 4px;
+    position:absolute;
+    border: none;
+    border-radius: 9px;
+    background-color: #2B3C4A;
+    margin-top: 0px;
+    margin-left: 60px;
+}
+
+#notifications-settings .post-main a {
+    color: #FFFFFF;
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 3px 24px 50px 24px;
+    margin-left: 90px;
+}
+
+#notifications-settings .post-main p {
+    width: 500px;
+    height: 35px;
+    color:#FFFFFFB2;
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 20px 24px;
+    margin-left: 90px;
+}
+
+#notifications-settings .post-main input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+  
+#notifications-settings .post-main label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 59px;
+    height: 34px;
+    background: #03090F;
+    display: block;
+    border-radius: 31px;
+    position: relative;
+    margin-left: 860px;
+    margin-top: -30px;
+    margin-bottom: 85px
+}
+  
+#notifications-settings .post-main label:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+  
+#notifications-settings .post-main input:checked + label {
+    background: #5176D6;
+}
+  
+#notifications-settings .post-main input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+  
+#notifications-settings .post-main label:active:after {
+    width: 50px;
+}

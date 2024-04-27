@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'main/css/SignUp.css' %}">
+        <link rel="stylesheet" href="{% static 'main/css/animation.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body>
+
+        <center>         
+            <div class="logup-wrap">
+                <div class="logup-html">
+                    <h3   class="sign-up" checked><label class="tab">SIGN UP</label></h3>
+                    <h6 class="have-account">Have an account?<a href="{%url 'authorization' %}">Sign In</a></h6>
+
+                    <div class="logup-form">
+                        <div class="sign-up-htm">
+                            
+
+                            <form method="post">
+                                {% csrf_token %}
+                            
+                                <div class="group">
+                                    <label for="user" class="label1">Введите адрес электронной почты</label>
+                                    <input id="user" type="text" class="input" placeholder="Email address" name="email" required="">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Введите имя пользователя</label>
+                                    <input id="pass" type="text" class="input" data-type="text" placeholder="Username" name="username">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Введите пароль</label>
+                                    <input id="pass" type="password" class="input" data-type="password" placeholder="Password" name="password1">
+                                </div> 
+                                <div class="group">
+                                    <label for="pass" class="label">Подвердите пароль</label>
+                                    <input id="pass" type="password" class="input" data-type="password" placeholder="Password" name="password2">
+                                </div> 
+
+                                <div class="forms-error">{{ form.errors }}</div>
+
+
+                                <div class="group">
+                                    <input type="submit" class="submit-sign-up" value="Sign Up"></input>
+                                </div>
+                                <div class="group">
+                                <p class="agreement">I agree with <a href="" class="agreement-link">terms of conditions</a> and <a href="" class="agreement-link">privacy policy</a></p>
+                                </div> 
+
+                            </form>    
+
+                                    
+                        </div>
+
+                        <div class="hr"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </center>
+</body>
+</html>

@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'fortuneWheel',
+    'Diveloto667.main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,3 +128,11 @@ django_heroku.settings(locals())
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'diveloto@mail.ru'  # Ваша почта для отправки писем
+EMAIL_HOST_PASSWORD = 'Nur2023Di_vrot'  # Пароль от почты
+

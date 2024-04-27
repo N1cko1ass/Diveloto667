@@ -1,0 +1,49 @@
+{%extends "main/profile/main-profile.html" %}
+
+
+{%block content%}
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <link rel="stylesheet" href=" {% static "main/css/profile/main-info.css"%}">
+    </head>
+    <body>
+        <div id="main-info">
+            <div class="profile-photo">
+                <img src="C:\Users\Asus\Downloads\Аватарка.png">
+            </div>
+        
+            <div id="profile-basic-data">
+                <label for="user">ФИО</label>
+                <input id="user" type="text" placeholder="Фамилия Имя Отчество">
+
+                <label for="pass">Адрес электронной почты</label>
+                <input id="pass" type="password" data-type="password" placeholder="Адрес электронной почты">
+
+                <label for="pass">Номер телефона</label>
+                <input id="pass" type="password" data-type="password">
+            </div>
+        
+            <div id="profile-add-functions">
+                <a>Пароль от аккаунта</a>
+                <button class="edit-button">Изменить</button>
+
+                <a>Двухфакторная аутенитификация</a>
+                <p>Двухфакторная аутентификация усиливает защиту вашего аккаунта через код подтверждения, отправляемый на ваше устройство.</p>
+                <button class="edit-button">Включить</button>
+
+                <a>Выйти из аккаунта</a>
+                <button class="edit-button-red" onclick="location.href='{% url "logout" %}'">Выйти</button>
+
+                <a>Удалить аккаунт</a>
+                <p>При удалении аккаунта, все данные будут удалены и вы больше не сможете получить доступ к этому аккаунту. Это действие перманентно.</p>
+                <button class="edit-button-empty">Удалить аккаунт</button>
+            </div>
+                
+        </div>
+            
+    </body>
+</html>
+
+{% endblock %}

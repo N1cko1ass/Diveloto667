@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Ваш заголовок страницы</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/animation.css' %}">
+</head>
+<body>
+<header>
+    <div class="header-logo"><a href="index(2).html">DIVELOTO</a></div>
+    
+    <div id="header-navigation">
+        <div class="menu">
+            <a href="{% url 'home' %}">Главное<span></span></a>
+            <a href="#">Игры<span></span></a>
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <a class="last" href="{% url 'profile' %}"> {{user.username}} </a>
+        {% else %}
+        <div class="Sign-Up-button">
+            <a href="{% url 'authorization'%}" class="btn btn-white btn-        animate" onclick="{% url 'authorization'%}">Sign In</a>
+        </div>
+        {% endif %}
+
+
+
+    </div>
+</header>
+<main>
+
+    <img class="background-ellipse" src="{% static 'main/pictures/Bright background.png' %}">
+    <img class="background-white-card-first" src="{% static 'main/pictures/background-white-card-first.png' %}">
+    <img class="background-yellow-cube-first" src="{% static 'main/pictures/background-yellow-cube-first.png' %}">
+    <img class="background-yellow-cube-second" src="{% static 'main/pictures/background-yellow-cube-second.png' %}">
+    <img class="background-white-card-second" src="{% static 'main/pictures/background-white-card-second.png' %}">
+    <img class="background-white-card-third" src="{% static 'main/pictures/background-white-card-third.png' %}">
+    <img class="background-casino-chips" src="{% static 'main/pictures/background-casino-chips.png' %}">
+    <img class="background-holiday-ribbons" src="{% static 'main/pictures/background-holiday-ribbons.png' %}">
+    <img class="main-little-box" src="{% static 'main/pictures\main-little-box.png' %}">
+    <img class="main-big-box" src="{% static 'main/pictures\main-big-box.png' %}">
+
+    <div class="text-Online-slots" type="text">Онлайн слоты</div>
+    <div class="text-Apply-for-Diveloto" type="text">Присоединяйся к нам в слотах!</div>
+            
+    <button type="button" class="button-for-starting">Начать</button>
+
+            
+<div class="navigation-for-users">
+    <div class="navigation-blocks">
+        <div class="circle"><span>01</span></div>
+        <div class="text-container">
+            <div class="text">Регистрация</div>
+            <div class="subtext">Регистрируйся одним кликом</div>
+        </div>
+            <div class="line"></div>
+    </div>
+                  
+    <div class="navigation-blocks">
+        <div class="circle"><span>02</span></div>
+        <div class="text-container">
+            <div class="text">Депозит</div>
+            <div class="subtext">150 000 бонусов за первое пополнение!</div>
+        </div>
+            <div class="line"></div>
+    </div>
+                       
+    <div class="navigation-blocks">
+        <div class="circle"><span>03</span></div>
+        <div class="text-container">
+            <div class="text">Наслаждайся игрой!</div>
+            <div class="subtext">Начни играть прямо сейчас!</div>
+        </div>
+            <div class="line"></div>
+    </div>
+</div>
+
+
+<div class="game-level">
+    <div class="Jackpots_and_slots-text">Джекпоты и слоты!</div>
+    <div class="subtext_jackpots">С первым депозитом мы даем бонусы.
+        Играй сейчас и выигрывай.</div>
+        {% if request.user.is_authenticated %}
+        <div class="first-line-blocks-for-games" onclick="document.location={% url 'fortuneWheel' %}">
+            <img src="{% static 'main/pictures/image 7.png' %}" alt="Image 1">
+            <p>Колесо фортуны</p>
+        </div>
+        {% else %}
+        <div class="Sign-Up-button">
+            <div class="first-line-blocks-for-games" onclick="document.location={% url 'home' %}">
+                <img src="{% static 'main/pictures/image 7.png' %}" alt="Image 1">
+                <p>Колесо фортуны</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="first-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-d3094bc3a6f8.png' %}" alt="Image 2">
+            <p>Caption 2</p>
+        </div>
+        <div class="first-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-269c7fad9ec0.png' %}" alt="Image 3">
+            <p>Caption 3</p>
+        </div>
+        <div class="first-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-cef96240ee80.png' %}" alt="Image 4">
+            <p>Caption 4</p>
+        </div>
+        
+        <!-- Второй ряд блоков -->
+        <div class="second-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-269c7fad9ec0 (1).png' %}" alt="Image 5">
+            <p>Caption 5</p>
+        </div>
+        <div class="second-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-cef96240ee80 (1).png' %}" alt="Image 6">
+            <p>Caption 6</p>
+        </div>
+        <div class="second-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-cec66bd780ec.png' %}" alt="Image 7">
+            <p>Caption 7</p>
+        </div>
+        <div class="second-line-blocks-for-games">
+            <img src="{% static 'main/pictures/ezgif-3-d3094bc3a6f8 (1).png' %}" alt="Image 8">
+            <p>Caption 8</p>
+        </div>
+
+        <button class="Show_More_button" type="button">Показать еще</button>
+</div>
+
+</main>
+<footer>
+            <div class="footer-logo"><a href="index(2).html" class="footer-logo">DIVELOTO</a></div>
+
+            <hr class="footer-line">
+            
+            <div class="text-about-certification">
+            <h6 class="text-about-certification">Все права пренадлежат © DiveLoto. Официальные игры в лото!</h6>
+            </div>
+
+            <div class="payment_icons">
+            <img  src="{% static 'main/pictures/payment-icon.png' %}">
+            </div>
+
+</footer>
+
+</body>
+</html>

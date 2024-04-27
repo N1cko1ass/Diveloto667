@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #32383d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  position: static;
+}
+
+@media screen and (max-width:  4812px) {
+  .container {
+    top: 350px;
+    left: 500px;
+    width: 500px;
+    height: 500px;
+    background-color: #000000;
+    transform: scale(0.5);
+    transform: scale(1);
+    border-radius: 155%;
+    border: 15px solid rgb(0, 0, 0);
+    border: 15px dotted rgb(255, 255, 255);
+    border-spacing: dotted 12px;
+    position: absolute;
+    overflow: hidden;
+    transition: 3s;
+}
+}
+
+@media screen and (max-width:  4812px) {
+.container div {
+  height: 50%;
+  width: 200px;
+  position: absolute;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #fff;
+  left: 135px;
+}
+}
+
+.container .one {
+  background-color: #1900ff;
+  transform: rotate(0deg);
+  
+}
+
+.container .two {
+  background-color: #ff0404;
+  transform: rotate(45deg);
+  
+}
+
+.container .three {
+  background-color: #1900ff;
+  transform: rotate(90deg);
+  
+}
+
+.container .four {
+  background-color: #ff0404;
+  transform: rotate(135deg);
+ 
+}
+
+.container .five {
+  background-color: #1900ff;
+  transform: rotate(180deg);
+ 
+}
+
+.container .six {
+  background-color: #ff0404;
+  transform: rotate(225deg);
+ 
+}
+
+.container .seven {
+  background-color: #1900ff;
+  transform: rotate(270deg);
+  
+}
+
+.container .eight {
+  background-color: #ff0404;
+  transform: rotate(315deg);
+  
+}
+
+
+#spin {
+  position: absolute;
+  top: 570px;
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #0e0e0e;
+  text-transform: uppercase;
+  border: 8px solid #000000;
+  font-weight: bold;
+  font-size: 10px;
+  color: #e2e2e2;
+  width: 80px;
+  height: 80px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0px;
+}
+
+#triangle_down {
+  top: 300px;
+  right: 600px;
+  left:730px;
+  padding-top: 523;
+  width: 0;
+  height: 0;
+  border-top: 50px solid #000000;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+}

@@ -1,0 +1,96 @@
+.btn:link,
+.button-for-starting:link{
+ font-family: Arial, Helvetica, sans-serif;
+ text-decoration: none;
+ padding: 14px 35px;
+ display: inline-block;
+ border-radius: 4px;
+ transition: all .2s;
+ position: absolute;
+}
+      
+.btn:hover,
+.button-for-starting:hover,
+.submit-sign-in:hover {
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ background-color: #081a2d;
+ transition: 0.3s;
+}
+      
+.btn:active,
+.button-for-starting:active,
+.submit-sign-in:active {
+ transform: scale(0.98); 
+ box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+      
+.btn-white {
+ background-color: #5176D6;
+ color: #FFFFFF;
+}
+      
+.btn::after,
+.button-for-starting::after,
+.submit-sign-in::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ transition: all .4s;
+}
+    
+.btn:hover::after,
+.button-for-starting:hover::after,
+.submit-sign-in:hover::after {
+ transform: scaleX(1.4) scaleY(1.6);
+ opacity: 0;
+}
+
+.first-line-blocks-for-games:link,
+.second-line-blocks-for-games:link,
+.Show_More_button:link{
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 14px 35px;
+      
+  display: inline-block;
+  border-radius: 4px;
+  transition: all .2s;
+  position: absolute;
+}
+      
+.first-line-blocks-for-games:hover,
+.second-line-blocks-for-games:hover,
+.Show_More_button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #081a2d;
+  transition: 0.3s;
+}
+      
+.first-line-blocks-for-games:active,
+.second-line-blocks-for-games:active,
+.Show_More_button:active{
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+      
+.first-line-blocks-for-games::after,
+.second-line-blocks-for-games::after,
+.Show_More_button::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}

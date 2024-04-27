@@ -1,0 +1,128 @@
+body {
+    background-color: rgb(15, 17, 32);
+  }
+  .logup-html {
+    width: 539px;
+    height: 651px;
+    background: #1d293d;
+    box-shadow: 0px 4px 35px 0px #00000014;
+    border-radius: 25px;
+  }
+  
+  .sign-up {
+    position: absolute;
+    width: 251px;
+    height: 83px;
+    margin-top: 65px;
+    margin-left: 45px;
+    margin-right: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 83px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ebebeb;
+  }
+  
+  .sign-up-htm {
+    position: absolute;
+    color: #ebebeb;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 451px;
+    height: 92px;
+    margin-top: 200px;
+    margin-left: 45px;
+    text-align: left;
+  }
+  
+  .logup-form .grpup .label {
+    margin-left:1px
+  }
+  
+  .logup-form .group .label,
+  .logup-form .group .input {
+    margin-top: 30px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: block;
+  }
+  
+  .logup-form .group .input {
+    width: 405px;
+    height: 15px;
+    position: relative;
+    margin-top: 15px;
+    background: linear-gradient(0deg, #1d293d, #1d293d),
+      linear-gradient(0deg, #4285f4, #4285f4);
+    border: 1px solid #4285f4;
+    border-color: #4285f4;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 20px;
+    border-radius: 9px;
+  }
+  
+  
+  .button {
+    margin-top: 150px;
+    color: #4285f4;
+  }
+  
+  .have-account {
+    width: 130px;
+    height: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    color: white;
+    margin-top: 78px;
+    margin-left: 350px;
+  }
+  
+  .have-account a {
+    color: #5176d6;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  
+  .submit-sign-up {
+    position: absolute;
+    width: 442px;
+    height: 54px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d293d;
+    margin-top: 540px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    background: #5176d6;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Horizontal centering */
+  }
+
+.agreement {
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 605px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:white;
+
+}
+
+.agreement-link {
+    color: #0f3390;
+    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+}

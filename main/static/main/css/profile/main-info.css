@@ -1,0 +1,141 @@
+#main-info {
+    width: 976px;
+    height: 800px;
+    margin-top: 133px;
+    margin-left: 400px;
+    border-radius: 25px;   
+    background: #19232B;
+    display: flex;
+}
+
+.profile-photo {
+    width: 254px;
+    height: 252px;
+    position: absolute;
+    margin: 60px 60px;
+    border-radius: 50%;   
+    border: 3px; 
+    border: 3px solid #03090F;
+}
+
+#profile-basic-data {
+	color: #EBEBEB;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 630px;
+    height: 45px;
+    margin: 35px 380px;
+    position: absolute;
+}
+
+
+#profile-basic-data label,
+#profile-basic-data input {
+	margin-top: 28px;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	display:block;
+}
+
+#profile-basic-data input {
+	width: 484px;
+    height: 10px;
+	position: relative;
+	margin-top: 5px;
+    background: #03090F;
+    border-color: #03090F ;
+    border: 1px solid #03090F;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:15px 20px;
+	border-radius:4px;
+}
+
+#profile-add-functions {
+    margin: 340px  60px;
+}
+
+#profile-add-functions a {
+
+    color: #FFFFFF;
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 35px 24px 0px 24px;
+}
+
+#profile-add-functions .edit-button {
+    background: #446ACB;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 35px 655px 30px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 192px;
+}
+  
+#profile-add-functions .edit-button:hover {
+    background: #03090F;  
+}
+
+#profile-add-functions .edit-button-red {
+    background: #CB4444;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 38px 655px 0px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 192px;
+}
+  
+#profile-add-functions .edit-button-red:hover {
+    background: #03090F;
+}
+
+#profile-add-functions .edit-button-empty {
+    background: #03090F;
+    border-color: #CB4444;
+    color: #CB4444;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 67px 655px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 192px;
+    border-style: groove;
+}
+  
+#profile-add-functions .edit-button-empty:hover {
+    background: #CB4444;
+    color: #03090F;
+}
+  
+
+#profile-add-functions p {
+    width: 500px;
+    height: 57px;
+    color: #FFFFFFB2;
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 58px 24px;
+}
