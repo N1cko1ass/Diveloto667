@@ -1,26 +1,29 @@
-{% load static %}
+{%extends "main/profile/main-profile.html" %}
 
+
+{% block content %}
 <!DOCTYPE html>
+{% load static%}
 <html>
     <head>
-        <link rel="stylesheet" href="{% static "main/css/profile/../../../static/main/css/profile/main-profile.css" %}">
+        <link rel="stylesheet" href="{% static "main/css/profile/main-profile-bonuses.css"%}">
     </head>
     <body>
+        <div id="main-profile-bonuses">
+            <div class="bonus-systems-text">
+                <a>Бонусная система</a>
+                <p>Воспользуйтесь нашим предложением и получите постоянный бонус: 5% от суммы каждой вашей ставки будет автоматически возвращаться на ваш депозит. Это отличная возможность увеличить свои шансы на выигрыш, не упустите ее!</p>
+            </div>
+            <div id="profile-bonuses-promotional-code">
 
-        <aside>
-        <div id="Profile">
-            <div class="Profile-menu">
-            <a href="{% url "profile" %}">Основное<span></span></a>
-            <a href="{% url "profile_notifications" %}">Уведомления<span></span></a>
-            <a href="{% url "profile_bonuses" %}">Бонусы<span></span></a>
+                <label for="pass">Промокод</label>
+                <input id="pass" type="text" data-type="password" placeholder="Введите промокод...">
+
+                <label for="pass">Ссылка</label>
+                <input id="pass" type="text" data-type="password" placeholder="Введите ссылку...">
             </div>
         </div>
-
-        </aside>
-
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
     </body>
 </html>
+
+{% endblock %}

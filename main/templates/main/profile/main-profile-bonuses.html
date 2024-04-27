@@ -3,24 +3,38 @@
 
 {% block content %}
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="{% static "main/css/profile/../../../static/main/css/profile/main-profile-bonuses.css" %}">
+        <link rel="stylesheet" href="{% static "main/css/profile/main-profile-notifications.css" %}">
     </head>
     <body>
-        <div id="main-profile-bonuses">
-            <div class="bonus-systems-text">
-                <a>Бонусная система</a>
-                <p>Воспользуйтесь нашим предложением и получите постоянный бонус: 5% от суммы каждой вашей ставки будет автоматически возвращаться на ваш депозит. Это отличная возможность увеличить свои шансы на выигрыш, не упустите ее!</p>
+        <div id="notifications-settings">
+            <div class="main">
+                <a>Присылать уведомления</a>
+                <p>Отправлять уведомления на электронную почту и через SMS.</p>
+                <input type="checkbox" id="main-notations-switch" /><label for="main-notations-switch">Toggle</label>
             </div>
-            <div id="profile-bonuses-promotional-code">
 
-                <label for="pass">Промокод</label>
-                <input id="pass" type="text" data-type="password" placeholder="Введите промокод...">
+            <div class="post-main">
+                <hr>
 
-                <label for="pass">Ссылка</label>
-                <input id="pass" type="text" data-type="password" placeholder="Введите ссылку...">
+                <a>Уведомления о розыгрыше</a>
+                <p>Информация о предстоящих тиражах и результатах прошедших игр.</p>
+                <input type="checkbox" id="switch-for-raffle-notations" /><label for="switch-for-raffle-notations">Toggle</label>
+
+                <a>Бонусы и акции</a>
+                <p>Специальные предложения, бонусные баллы и скидки на покупку билетов.</p>
+                <input type="checkbox" id="switch-for-bonus-notations" /><label for="switch-for-bonus-notations">Toggle</label>
+
+                <a>Изменения в аккаунте</a>
+                <p>Информация об изменениях в настройках аккаунта или важных обновлениях политики сайта.</p>
+                <input type="checkbox" id="switch-for-edit-notations" /><label for="switch-for-edit-notations">Toggle</label>
+
+                <a>Системные уведомления</a>
+                <p>Технические уведомления о работе сайта, например, о запланированном обслуживании или обновлениях.</p>
+                <input type="checkbox" id="switch-for-system-notations" /><label for="switch-for-system-notations">Toggle</label>
+
             </div>
         </div>
     </body>
