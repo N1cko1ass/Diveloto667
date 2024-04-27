@@ -1,1 +1,1 @@
-web gunicorn Diveloto667.wsgi:apllication --log-file -
+web gunicorn Diveloto667.wsgi:application --log-file -
