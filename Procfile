@@ -1,0 +1,1 @@
+web gunicorn Diveloto667.wsgi:apllication --log-file -
