@@ -10,13 +10,13 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    return render(request, 'main/templates/main/index.html')
 
 
    
 class registration(CreateView):
     form_class = SignUpForm
-    template_name = 'main/SignUp.html'
+    template_name = 'main/templates/main/SignUp.html'
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -46,7 +46,7 @@ class registration(CreateView):
 
 class authorization(LoginView):
     form_class = AuthorizationForm
-    template_name = 'main/SignIn.html'
+    template_name = 'main/templates/main/SignIn.html'
 
     def get_success_url(self):
         return reverse_lazy('home')
@@ -57,10 +57,10 @@ def logout_user(request):
     
 
 def profile_main(request):
-    return render(request, 'main/profile/main-info.html')
+    return render(request, 'main/profile/templates/main/profile/main-info.html')
 
 def profile_notifications(request):
-    return render(request, "main/profile/main-profile-notifications.html")
+    return render(request, "main/profile/templates/main/profile/main-profile-notifications.html")
 
 def profile_bonuses(request):
-    return render(request, "main/profile/main-profile-bonuses.html")
+    return render(request, "main/profile/templates/main/profile/main-profile-bonuses.html")

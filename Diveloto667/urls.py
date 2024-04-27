@@ -24,6 +24,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Diveloto667.main.urls')),
-path('fortune_wheel/', include('Diveloto667.fortuneWheel.urls')),
+    path('', include('main.urls')),
+    path('fortune_wheel/', include('fortuneWheel.urls')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
